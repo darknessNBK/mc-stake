@@ -1,38 +1,226 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Raleway:ital,wght@1,700&display=swap');
+
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: url(https://www.legendsofatlantisnft.com/raffle/images/background.jpg) fixed no-repeat;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.stakeBody {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 2fr 2fr 2fr;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.stakeMenu {
+  background: rgba(26, 26, 27, 1);
+  grid-row: 2;
+  grid-column: 2;
+  border-radius: 1rem;
+  border: 1px solid rgba(253, 253, 254, 0.13);
   color: white;
+
+  display: grid;
+  grid-template-rows: 0.5fr 3fr 0.3fr 0.5fr;
+  grid-row-gap: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.stakeTitle {
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.stakedNFTs {
+  grid-row: 2;
+  border-bottom: 1px solid white;
+}
+
+.stakedNFTs p, .stakedNFTs hr {
+  margin: 0;
+  font-weight: bold;
+  margin-left: 2%;
+  margin-right: 50%;
+  font-family: 'Lato', sans-serif;
+
+}
+
+.stakeInfo {
+  grid-row: 3;
+  justify-self: center;
+  align-self: center;
+  font-size: 24px;
+}
+
+.stakeInfoSmall {
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+
+}
+
+.stakeInfo p, .stakeInfo hr {
+  margin: 0;
+  font-weight: bold;
+  margin-left: 2%;
+  margin-right: 50%;
+  font-family: 'Lato', sans-serif;
+
+}
+
+.claimRewardButton {
+  grid-row: 4;
+  height: 100%;
+  width: 95%;
+  justify-self: center;
+  align-self: center;
+}
+
+.claimRewardButton button {
+  width: 17.5rem;
+  height: 50%;
+  width: 100%;
+  background: #0468ff;
+  border-radius: 0.4rem;
+  border: 1px solid black;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+
+}
+
+.claimRewardButton i {
+  font-size: 12px;
+}
+
+.claimRewardButton button:hover {
+  cursor: pointer;
+}
+
+.atlantisLogo {
+  align-self: center;
+  justify-self: center;
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.NFT-Info {
+  display:grid;
+  grid-template-rows: 2fr 0.5fr 0.2fr;
+  grid-template-columns: 2fr 5fr 2fr;
+  width: 100%;
+  height: 100%;
+}
+
+.NFT-Image {
+  grid-row: 1;
+  grid-column: 2;
+  background: url(https://media.discordapp.net/attachments/946839152228458586/954893575722778655/554724D0-CE99-49CD-93FD-E6C77546DA6D.png) center;
+  background-size: cover;
+  width: 300px;
+  justify-self: center;
+  border: 1px solid rgb(163, 169, 176);
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.NFT-Name {
+  grid-row: 2;
+  grid-column: 2;
+  font-weight: bold;
+  color: #bdc4ce;
+  justify-self: center;
+  align-self: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.NFT-Left {
+  grid-row: 2;
+  grid-column: 1;
+  justify-self: center;
+  align-self: center;
+  cursor: pointer;
+  user-select: none;
+  z-index: 999;
+}
+
+.NFT-Right {
+  grid-row: 2;
+  grid-column: 3;
+  justify-self: center;
+  align-self: center;
+  cursor: pointer;
+  user-select: none;
+  z-index: 999;
+}
+
+.NFT-Right button, .NFT-Left button {
+  background: #0468ff;
+  border-radius: 0.4rem;
+  border: 1px solid black;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  width: 6rem;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+}
+
+.NFT-Right button:hover, .NFT-Left button:hover {
+  cursor: pointer;
+}
+
+.NFT-Image {
+  display: flex;
+}
+
+.metamask {
+  text-align: center;
+  margin-top: 25%;
+}
+
+.metamask button {
+  background: #0468ff;
+  border-radius: 0.4rem;
+  border: 1px solid black;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  width: 50%;
+  height: 3rem;
+}
+
+.metamask button:hover {
+  cursor: pointer;
+}
+
+.logout {
+  margin-top: 1%;
+  grid-row: 3;
+  grid-column: 2;
+}
+
+.logout button {
+  background: #0468ff;
+  border-radius: 0.4rem;
+  border: 1px solid black;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  width: 25%;
+  height: 2rem;
+}
+
+.logout button:hover {
+  cursor: pointer;
 }
